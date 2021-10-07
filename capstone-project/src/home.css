@@ -1,0 +1,102 @@
+body {
+    background-image: url(https://images-ext-2.discordapp.net/external/WxkCmtmNtN-PsCLHQZ6MsLIEgQIXEE6p-YhpFMMN0EU/https/c4.wallpaperflare.com/wallpaper/828/579/667/abstract-neon-lights-hd-wallpaper-preview.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    background-attachment: scroll;
+}
+  
+  .button {
+    min-height: 100vh;
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  
+  
+  .btn {
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: 900;
+    padding: 1.25rem 2rem;
+    font-size: 1rem;
+    /* border-radius: 3.5rem/100%; */
+    position: relative;
+    min-width: 15rem;
+    max-width: 90vw;
+    overflow: hidden;
+    border: 0;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: all 330ms;
+    margin-left: 2em;
+    margin-right: 2em;
+  }
+
+  .btn span {
+    position: relative;
+    z-index: 1;
+  }
+  .btn:before {
+    content: "";
+    background-color: #21D4FD;
+    position: absolute;
+    top: 0;
+    right: 0px;
+    bottom: 0;
+    left: 0;
+    transform: scale(4) translateX(-100%);
+    transition: all 495ms ease-out;
+  }
+  .btn:hover:before, .btn:focus:before, .btn:active:before {
+    transform: scale(4) translate(37%);
+  }
+  
+
+/* alpha button */
+
+  .btn--alpha {
+    background-color: #21D4FD;
+    color: #B721FF;
+  }
+  .btn--alpha:before {
+    background-color: #B721FF;
+    background-image: linear-gradient(to right, #B721FF 30%, #fff 100%);
+    position: absolute;
+  }
+  .btn--alpha:hover, .btn--alpha:focus, .btn--alpha:active {
+    color: #21D4FD;
+  }
+
+  /* beta button */
+  
+  .btn--beta {
+    background-color: #08AEEA;
+    color: #2AF598;
+  }
+  .btn--beta:before {
+    background-color: #2AF598;
+    background-image: linear-gradient(to right, #2AF598 30%, #08AEEA 100%);
+    position: absolute;
+  }
+  .btn--beta:hover, .btn--beta:focus, .btn--beta:active {
+    color: #08AEEA;
+  }
+
+  @media only screen and (max-width: 720px) {
+    .button{
+        flex-direction: column;
+
+    }
+
+    .btn {
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+    }
+  }
+
