@@ -5,8 +5,8 @@ function Nav() {
     return (
         <div class="navbar">
             <ul>
-                <li><Link to="./">Home</Link></li>
-                <li><Link to="./games">Games</Link></li>
+                <li><Link to="./">View All</Link></li>
+                <li><Link to="./games">New Search</Link></li>
                 <li><Link to="./about">About</Link></li>
             </ul>
         </div>
