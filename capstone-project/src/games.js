@@ -8,14 +8,6 @@ function Games() {
         <div>
         <Nav />
                 <div class="cards">
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
                 <GamesContainer />
                 </div>
         </div>

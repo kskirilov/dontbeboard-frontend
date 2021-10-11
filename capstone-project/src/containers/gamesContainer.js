@@ -10,20 +10,7 @@ class GamesContainer extends Component {
 
         this.state = {
             loaded: false,
-            games: [{
-                "id": 1,
-                "gameName": "Hangman",
-                "gamePhoto": "https://image.shutterstock.com/image-illustration/illustration-hangman-game-260nw-386156509.jpg",
-                "gameDescription": "One player chooses a word and the rest have a minimum of 6 attempts to guess it",
-                "gameRules": "1. Player 1 pick a word 2. Remaining players make a letter guess. If the letter is correct the player has to add it to the words else it is considered a wrong attempt",
-                "releaseDate": "1650-01-01",
-                "minPlayers": 2,
-                "maxPlayers": 6,
-                "avgDuration": 15,
-                "gameKind": "penAndPaper",
-                "gameMood": "fun",
-                "ageGroup": "all"
-            }]
+            games: []
           }
 
     }
