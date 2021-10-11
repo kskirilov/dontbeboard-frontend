@@ -2,12 +2,17 @@
     width: 100vw;
 }
 
+li logo {
+  color: #fff;
+  align-items: center;
+  justify-content: center;
+}
 ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow:auto;
-    background-color: #333;
+    background-color: black;
     display:flex;
     position: relative;
     top: 0;

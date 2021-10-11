@@ -5,8 +5,9 @@ function Nav() {
     return (
         <div class="navbar">
             <ul>
-                <li><Link to="./">View All</Link></li>
-                <li><Link to="./games">New Search</Link></li>
+                <li><Link to="./">♞ DontBeBoard.</Link></li>
+                <li><Link to="./">New Search</Link></li>
+                <li><Link to="./games">View All</Link></li>
                 <li><Link to="./about">About</Link></li>
             </ul>
         </div>
