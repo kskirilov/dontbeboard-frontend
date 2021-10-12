@@ -29,16 +29,11 @@ blockquote {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; */
   
- 
-  .desciription { 
-     color:white; 
 
-      
-  }
 
-  body, button, input {
+  .background button, input {
     font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
+    font-weight: 800;
     letter-spacing: 1.4px;
   }
   
@@ -140,6 +135,7 @@ blockquote {
     position: relative;
     color: #ea1d6f;
     font-size: 26px;
+    font-weight: 600;
   }
   
   .app-title:after {
