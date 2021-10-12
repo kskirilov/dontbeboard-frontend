@@ -7,17 +7,22 @@ function Card(props) {
         <div className="card flip-card" styles="width: 18rem;">
             <div className="flip-card-inner">
                 <div className="card-body flip-card-front">
-                    {/* <img src={props.imageSrc} className="card-img-top" alt="..." /> */}
                     <div className="centerText">
-                        <p>Game name: {props.name}</p>
+                        <img class="card-img-top" src={props.image} />
+                        <p class="game-name">{props.name}</p>
+                        <div class="game-properties">
+                            <p class="player-number">{props.minPlayers}-{props.maxPlayers} players</p>
+                            <p class="game-time">{props.time} minutes</p>
+                            <p class="game-type">{props.gameType}</p>
+                            <p class="game-mood">{props.mood}</p>
+                            <p class="age-group">{props.ageGroup}</p>
+                        </div>
                     </div>
                 </div>
                 <div className="card-body flip-card-back">
-                    <p>Number of players: {props.minPlayers}-{props.maxPlayers}</p>
-                    <p>Time to play: {props.time}</p>
-                    <p>Type of game: {props.gameType}</p>
-                    <p>Mood: {props.mood}</p>
-                    <p>Age group: {props.ageGroup}</p>
+                    <p>Release date: {props.releaseDate}</p>
+                    <p>Description: {props.description}</p>
+                    
                 </div>
             </div>
         </div>

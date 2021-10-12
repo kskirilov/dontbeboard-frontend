@@ -8,10 +8,11 @@ function Nav() {
                 <li><Link to="./">♞ DontBeBoard.</Link></li>
                 <li><Link to="./">New Search</Link></li>
                 <li><Link to="./games">View All</Link></li>
-                <li><Link to="./about">About</Link></li>
+                <li><Link to="./about">Submit A Game</Link></li>
             </ul>
         </div>
     )
 }
+
 
 export default Nav;

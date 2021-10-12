@@ -15,7 +15,7 @@
 .flip-card {
     background-color:transparent;
     width: 300px;
-    height: 300px;
+    height: 400px;
     perspective: 1000px;
   }
   
@@ -51,10 +51,15 @@
       color:white;
   }
 
-  /* This changes text color */
+  /* This changes text color and desciription*/
   .flip-card-back {
     transform: rotateY(180deg);
     color: white;
+    text-align: justify;
+  }
+
+  .flip-card-back p {
+    margin: 20px;
   }
 
   .card-body{
@@ -77,3 +82,57 @@
   .centerText{
   display: inline-block;
   }
+
+  .game-properties p {
+    border-style: solid;
+    border-color: white;
+    border-radius: 10px;
+    border-width: 1px;
+    width: fit-content;
+    padding-left: 3px;
+    padding-right: 3px;
+    margin-right: 5px;
+    margin-left: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  .card-img-top{
+    height: 245px;
+    width: 295px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    margin-top: 2px;
+  }
+
+  .game-properties {
+    display: flex;
+    flex-wrap: wrap;
+    margin:0;
+  }
+
+  .game-name {
+      font-weight: bold;
+  }
+
+  .player-number {
+    background-color: #344021;
+  }
+
+  .game-time {
+    background-color: #4F2820;
+  }
+
+  .game-type {
+    background-color: #693070;
+  }
+
+  .game-mood {
+    background-color: #242452;
+  }
+
+  .age-group {
+    background-color: #1E3F42;
+  }
+
+  

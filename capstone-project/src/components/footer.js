@@ -17,23 +17,22 @@ function footer() {
                         <h3>Services</h3>
                         <ul>
                             <li><a href="#">Find a game</a></li>
-                            {/* <li><a href="#">Find a game</a></li> */}
-                            <li><a href="#">      </a></li>
 
                         </ul>
                     </div>
                     <div class="item">
                         <h3>About</h3>
                         <ul>
-                            <li><a href="#">Contact us   </a></li>
-                    
-                            <li><a href="#">Mission   </a></li>
+                            <li><a href="#">Contact us</a></li>
+                            <li><a href="#">Mission</a></li>
                         </ul>
                     </div>
+                <div class="left">
                     <div class="item text">
                         <h3>♞ DontBeBoard.</h3>
                         <p>Established in 2021 with the aim of bringing more fun and less fuss to your game nights. Let us do the work for you by picking a game to suit every occassion. Don't be board- let the games begin. </p>
                     </div>
+                 </div>
                     
                 </div>
                 <div class="item social"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-instagram"></i></a></div>

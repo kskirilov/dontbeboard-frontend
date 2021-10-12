@@ -7,9 +7,9 @@ function Games() {
     return (
         <div>
         <Nav />
-                <div class="cards">
+            <div class="cards">
                 <GamesContainer />
-                </div>
+            </div>
         </div>
     );
 }
