@@ -8,6 +8,7 @@ import DurationQuestion from './DurationQuestion.js';
 import GameKindQuestion from './GameKindQuestion';
 import GameMoodQuestion from './GameMoodQuestion';
 import AgeGroupQuestion from './AgeGroupQuestion'
+import ViewAll from './viewAll';
 
 
 
@@ -25,6 +26,7 @@ function App() {
       <Route path="/games" component={Games}/>
       <Route path="/about" component={About} exact />
       <Route path="/results" component={Results} exact />
+      <Route path="view-all" component={ViewAll} exact />
       </Switch>
       </BrowserRouter>
     </div>

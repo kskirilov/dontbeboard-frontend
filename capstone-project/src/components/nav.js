@@ -7,7 +7,7 @@ function Nav() {
             <ul>
                 <li><Link to="./">♞ DontBeBoard.</Link></li>
                 <li><Link to="./">New Search</Link></li>
-                <li><Link to="./games">View All</Link></li>
+                <li><Link to="./view-all">View All</Link></li>
                 <li><Link to="./about">Submit A Game</Link></li>
             </ul>
         </div>
