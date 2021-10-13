@@ -26,7 +26,7 @@ function App() {
       <Route path="/games" component={Games}/>
       <Route path="/about" component={About} exact />
       <Route path="/results" component={Results} exact />
-      <Route path="view-all" component={ViewAll} exact />
+      <Route path="/view-all" component={ViewAll} exact />
       </Switch>
       </BrowserRouter>
     </div>
