@@ -11,13 +11,18 @@ body {
   .button {
     min-height: 100vh;
     display: flex;
-    flex-direction:row;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
   }
 
-  
+  h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
   
   .btn {
     font-family: "Source Sans Pro", sans-serif;
@@ -38,13 +43,20 @@ body {
     margin-right: 2em;
   }
 
+#keepOnHover{
+  position: relative;
+  z-index: 1;
+}
+
   .btn span {
     position: relative;
     z-index: 1;
   }
+
   .btn:before {
     content: "";
-    background-color: #21D4FD;
+    background-color: #1B90B9;
+    /* opacity: 0.59; */
     position: absolute;
     top: 0;
     right: 0px;
@@ -61,12 +73,15 @@ body {
 /* alpha button */
 
   .btn--alpha {
-    background-color: #21D4FD;
-    color: #B721FF;
+    background-color: #1b8fb988;
+    color: white;
+    margin: 1%;
+
+    
   }
   .btn--alpha:before {
     background-color: #B721FF;
-    background-image: linear-gradient(to right, #B721FF 30%, #fff 100%);
+    /* background-image: linear-gradient(to right, #B721FF 30%, #fff 100%); */
     position: absolute;
   }
   .btn--alpha:hover, .btn--alpha:focus, .btn--alpha:active {
@@ -79,6 +94,7 @@ body {
     background-color: #08AEEA;
     color: #2AF598;
   }
+  
   .btn--beta:before {
     background-color: #2AF598;
     background-image: linear-gradient(to right, #2AF598 30%, #08AEEA 100%);
@@ -100,3 +116,16 @@ body {
     }
   }
 
+  #skip{
+    color: white;
+  }
+
+  /* .blackButton{
+    background-color: black;
+    color: white;
+  }
+  
+  .neonGreen{
+    background-color: white;
+    color:#39FF14;
+  } */
