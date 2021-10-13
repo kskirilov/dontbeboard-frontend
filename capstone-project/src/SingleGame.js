@@ -7,9 +7,6 @@ import React, { Component } from 'react';
 import { withRouter } from 'react-router'
 import './SingleGame.css';
 
-
-
-
 class SingleGame extends Component {
         constructor(props){
             super(props);
@@ -50,6 +47,8 @@ render() {
                     <p>Rules: {this.state.rules}</p>
                 </div>
             </div>
+            
+
             <Footer />
         </div>
     )

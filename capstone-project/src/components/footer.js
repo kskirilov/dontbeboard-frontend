@@ -16,7 +16,7 @@ function footer() {
                     <div class="item">
                         <h3>Services</h3>
                         <ul>
-                            <li><a href="#">Find a game</a></li>
+                            <li><a href="/">Find a game</a></li>
 
                         </ul>
                     </div>
