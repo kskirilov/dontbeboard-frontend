@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import './card.css'
+import { Link } from 'react-router-dom'
+import { withRouter } from 'react-router'
 
 function Card(props) {
 
@@ -22,11 +24,27 @@ function Card(props) {
                 <div className="card-body flip-card-back">
                     <p>Release date: {props.releaseDate}</p>
                     <p>Description: {props.description}</p>
-                    
+                    <Link to={{
+                        pathname: '/single-game',
+                        state: {name: props.name,
+                                image: props.image,
+                                minPlayers: props.minPlayers,
+                                maxPlayers: props.maxPlayers,
+                                time: props.time,
+                                gameType: props.gameType,
+                                mood: props.mood,
+                                ageGroup: props.ageGroup,
+                                releaseDate: props.releaseDate,
+                                description: props.description,
+                                rules: props.rules
+                        }
+                    }}> 
+                    <button class="btn btn--alpha"><span>See more information</span></button>
+                    </Link>
                 </div>
             </div>
         </div>
     )
 }
 
-export default Card
+export default withRouter(Card)
