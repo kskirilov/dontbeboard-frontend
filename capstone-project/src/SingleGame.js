@@ -34,7 +34,7 @@ render() {
             <h1 id="game-name">{this.state.name}</h1>
             <div class="flex-container">
                 <div class="image-container">
-                    <img src={this.state.image} />
+                    <img src={this.state.image} alt="Image of a game" />
                 </div>
                 <div class="info-container">
                     <p>Release date: {this.state.releaseDate}</p>

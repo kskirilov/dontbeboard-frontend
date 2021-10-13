@@ -10,7 +10,7 @@ function Card(props) {
             <div className="flip-card-inner">
                 <div className="card-body flip-card-front">
                     <div className="centerText">
-                        <img class="card-img-top" src={props.image} />
+                        <img class="card-img-top" src={props.image} alt="Image of a game" />
                         <p class="game-name">{props.name}</p>
                         <div class="game-properties">
                             <p class="player-number">{props.minPlayers}-{props.maxPlayers} players</p>
