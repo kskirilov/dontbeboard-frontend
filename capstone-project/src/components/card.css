@@ -137,18 +137,17 @@
 
 
   .card-button {
-    background-color: #1b8fb988;
+    background-color:#FF10F0;;
     color: white;
     margin: 1%;
   }
 
   .card-button:before {
-    background-color: #B721FF;
-    background-image: linear-gradient(to right, #B721FF 30%, #fff 100%);
-    position: absolute;
+    background-color: #FF10F0;
   }
-  
+
   .card-button:hover, .card-button:focus, .card-button:active {
+    background-color: #FF10F0;
     color: #21D4FD;
   }
 
@@ -157,18 +156,6 @@
     z-index: 1;
   }
 
-  .card-button:before {
-    content: "";
-    background-color: #1B90B9;
-    /* opacity: 0.59; */
-    position: absolute;
-    top: 0;
-    right: 0px;
-    bottom: 0;
-    left: 0;
-    transform: scale(4) translateX(-100%);
-    transition: all 495ms ease-out;
-  }
   .card-button:hover:before, .card-button:focus:before, .card-button:active:before {
     transform: scale(4) translate(37%);
   }
@@ -178,7 +165,7 @@
     font-weight: 900;
     padding: 1.25rem 2rem;
     font-size: 1rem;
-    /* border-radius: 3.5rem/100%; */
+    border-radius: 3.5rem/100%;
     position: relative;
     min-width: 15rem;
     max-width: 90vw;
