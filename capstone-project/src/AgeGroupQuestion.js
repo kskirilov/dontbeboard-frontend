@@ -84,6 +84,7 @@ export class AgeGroupQuestion extends Component {
         return (
             <div>
                 <Nav/>
+                <div class="question-container">
                 <div class="button">
                 <h1>What kind of game are you looking for?</h1>
                     <button class="btn btn--alpha" style={{backgroundColor: this.state.bgColorAll}} value="all" onClick={this.handleChangeAll}>All</button>
@@ -107,6 +108,7 @@ export class AgeGroupQuestion extends Component {
 
 
                     
+                </div>
                 </div>
                 <Footer/>
             </div>

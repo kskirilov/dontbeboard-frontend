@@ -36,6 +36,7 @@ class PlayersQuestion extends Component {
     return (
         <div>
             <Nav/>
+            <div class="question-container">
             <div class="button">
             <h1>How many are playing today?</h1>
                 <button class="btn btn--alpha">
@@ -57,7 +58,7 @@ class PlayersQuestion extends Component {
                     <button class="btn btn--alpha" id="secondButton"><span>Continue</span></button>
                 </Link>
 
-                
+                </div>
             </div>
             <Footer/>
         </div>

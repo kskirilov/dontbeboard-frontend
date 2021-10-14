@@ -37,6 +37,7 @@ export class DurationQuestion extends Component {
     return (
         <div>
             <Nav/>
+            <div class="question-container">
             <div class="button">
             <h1>How long do you have?</h1>
                 <button class="btn btn--alpha">
@@ -57,6 +58,7 @@ export class DurationQuestion extends Component {
                 </Link>
 
                 
+            </div>
             </div>
             <Footer/>
         </div>

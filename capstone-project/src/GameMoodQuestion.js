@@ -83,6 +83,7 @@ export class GameMoodQuestion extends Component {
         return (
             <div>
                 <Nav/>
+                <div class="question-container">
                 <div class="button">
                     <h1>What kind of game are you looking for?</h1>
                     <button class="btn btn--alpha" style={{backgroundColor: this.state.bgColorFun}} value="fun" onClick={this.handleChangeFun}>Fun</button>
@@ -104,7 +105,7 @@ export class GameMoodQuestion extends Component {
                     </Link>
 
 
-                    
+                    </div>
                 </div>
                 <Footer/>
             </div>
