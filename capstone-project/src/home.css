@@ -11,6 +11,7 @@ body {
   .container{
     background-color: black;
   }
+
   .button {
     min-height: 100vh;
     display: flex;
@@ -20,7 +21,6 @@ body {
     text-align: center; 
     margin: 4px;
   }
-
   
   h1{
     margin-bottom:20px;
@@ -94,19 +94,7 @@ body {
   }
 
 
-  /* beta button */
   
-  .btn--beta {
-    background-color: #08AEEA;
-    color: #2AF598;
-  }
-  
-  .btn--beta:before {
-    background-color: #2AF598;
-  }
-  .btn--beta:hover, .btn--beta:focus, .btn--beta:active {
-    color: #08AEEA;
-  }
 
   @media only screen and (max-width: 720px) {
     .button{
@@ -120,6 +108,4 @@ body {
     }
   }
 
-  #skip{
-    color: white;
-  }
+  

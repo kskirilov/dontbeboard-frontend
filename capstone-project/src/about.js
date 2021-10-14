@@ -1,7 +1,7 @@
 import Nav from './components/nav';
 import './about.css';
 import React from 'react';
-// import Footer from './components/footer.js';
+import Footer from './components/footer.js';
 
 class About extends React.Component {
 
@@ -195,6 +195,7 @@ addNewGame(newGame){
     </div>
   </div>
 </div>
+<Footer />
 </div>
     )
   }

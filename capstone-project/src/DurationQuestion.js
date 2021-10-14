@@ -56,7 +56,7 @@ export class DurationQuestion extends Component {
                     <button class="btn btn--alpha"><span>Continue</span></button>
                 </Link>
 
-                <p id="skip">Skip question</p>
+                
             </div>
             <Footer/>
         </div>

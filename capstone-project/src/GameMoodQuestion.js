@@ -17,14 +17,65 @@ export class GameMoodQuestion extends Component {
           duration: this.props.location.state.duration,
           players: this.props.location.state.players,
           gameKind: this.props.location.state.gameKind,
-          gameMood: "fun"
+          gameMood: "fun",
+          bgColorFun: "#FF10F0",
+          bgColorDrinking: "#FF10F0",
+          bgColorCompetitive: "#FF10F0",
+          bgColorStrategy: "#FF10F0",
+          bgColorPhysicalActivity: "#FF10F0"
 
         };
-        this.handleChange = this.handleChange.bind(this);
+        
+        this.handleChangeFun = this.handleChangeFun.bind(this);
+        this.handleChangeDrinking = this.handleChangeDrinking.bind(this);
+        this.handleChangeCompetitive = this.handleChangeCompetitive.bind(this);
+        this.handleChangeStrategy = this.handleChangeStrategy.bind(this);
+        this.handleChangePhysicalActivity = this.handleChangePhysicalActivity.bind(this);   
       };
 
-      handleChange(event) {
+      handleChangeFun(event) {
         this.setState({gameMood: event.target.value});
+        this.setState({bgColorFun: "lightblue",
+        bgColorDrinking: "#FF10F0",
+        bgColorCompetitive: "#FF10F0",
+        bgColorStrategy: "#FF10F0",
+        bgColorPhysicalActivity: "#FF10F0"})
+      }
+      
+      handleChangeDrinking(event) {
+        this.setState({gameMood: event.target.value});
+        this.setState({bgColorFun: "#FF10F0",
+        bgColorDrinking: "lightblue",
+        bgColorCompetitive: "#FF10F0",
+        bgColorStrategy: "#FF10F0",
+        bgColorPhysicalActivity: "#FF10F0"});
+      }
+
+      handleChangeCompetitive(event) {
+        this.setState({gameMood: event.target.value});
+        this.setState({bgColorFun: "#FF10F0",
+        bgColorDrinking: "#FF10F0",
+        bgColorCompetitive: "lightblue",
+        bgColorStrategy: "#FF10F0",
+        bgColorPhysicalActivity: "#FF10F0"});
+      }
+
+      handleChangeStrategy(event) {
+        this.setState({gameMood: event.target.value});
+        this.setState({bgColorFun: "#FF10F0",
+        bgColorDrinking: "#FF10F0",
+        bgColorCompetitive: "#FF10F0",
+        bgColorStrategy: "lightblue",
+        bgColorPhysicalActivity: "#FF10F0"});
+      }
+
+      handleChangePhysicalActivity(event) {
+        this.setState({gameMood: event.target.value});
+        this.setState({bgColorFun: "#FF10F0",
+        bgColorDrinking: "#FF10F0",
+        bgColorCompetitive: "#FF10F0",
+        bgColorStrategy: "#FF10F0",
+        bgColorPhysicalActivity: "lightblue"});
       }
 
 
@@ -32,14 +83,13 @@ export class GameMoodQuestion extends Component {
         return (
             <div>
                 <Nav/>
-                <div class="container">
                 <div class="button">
                     <h1>What kind of game are you looking for?</h1>
-                    <button class="btn btn--alpha" value="fun" onClick={this.handleChange}>Fun</button>
-                    <button class="btn btn--alpha" value="drinking" onClick={this.handleChange}>Drinking</button>
-                    <button class="btn btn--alpha" value="competitive" onClick={this.handleChange}>Competitive</button>
-                    <button class="btn btn--alpha" value="strategy" onClick={this.handleChange}>Strategy</button>
-                    <button class="btn btn--alpha" value="physicalActivity" onClick={this.handleChange}>Physical activity</button>
+                    <button class="btn btn--alpha" style={{backgroundColor: this.state.bgColorFun}} value="fun" onClick={this.handleChangeFun}>Fun</button>
+                    <button class="btn btn--alpha" style={{backgroundColor: this.state.bgColorDrinking}} value="drinking" onClick={this.handleChangeDrinking}>Drinking</button>
+                    <button class="btn btn--alpha" style={{backgroundColor: this.state.bgColorCompetitive}} value="competitive" onClick={this.handleChangeCompetitive}>Competitive</button>
+                    <button class="btn btn--alpha" style={{backgroundColor: this.state.bgColorStrategy}} value="strategy" onClick={this.handleChangeStrategy}>Strategy</button>
+                    <button class="btn btn--alpha" style={{backgroundColor: this.state.bgColorPhysicalActivity}} value="physicalActivity" onClick={this.handleChangePhysicalActivity}>Physical activity</button>
 
                     <Link to={{
                         pathname: '/h5/'+this.state.gameMood,
@@ -54,11 +104,11 @@ export class GameMoodQuestion extends Component {
                     </Link>
 
 
-                    <p id="skip">Skip question</p>
+                    
                 </div>
                 <Footer/>
             </div>
-            </div>
+            
             );
         
                   }

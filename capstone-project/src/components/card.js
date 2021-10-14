@@ -39,7 +39,7 @@ function Card(props) {
                                 rules: props.rules
                         }
                     }}> 
-                    <button class="btn btn--alpha"><span>See more information</span></button>
+                    <button class="card-button"><span>See more information</span></button>
                     </Link>
                 </div>
             </div>

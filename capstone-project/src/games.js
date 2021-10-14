@@ -1,15 +1,20 @@
 import Nav from './components/nav';
 import './games.css'
-import Card from './components/card';
+import { useState } from 'react';
+
 import GamesContainer from './containers/gamesContainer';
+import Footer from './components/footer';
 
 function Games() {
+
     return (
         <div>
-        <Nav />
-            <div class="cards">
+            <Nav />
+            <h1 id="games-found">Games Found</h1>
+            <div class="games-cards">
                 <GamesContainer />
             </div>
+            <Footer />
         </div>
     );
 }

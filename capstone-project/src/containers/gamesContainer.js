@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import AllGames from '../components/allGames.js'
-import Card from "../components/card.js";
 import { withRouter } from 'react-router'
+import './gamesContainer.css'
   
 //FINAL SCREEN WITH GAMES. APPLY FILTERS.
 class GamesContainer extends Component {
@@ -32,13 +32,17 @@ class GamesContainer extends Component {
             .catch(error => console.log(error))   
     }
 
+    
 
     render(){
 
         return (
             <>
-                <AllGames games={this.state.games}/>
-            </>
+                
+                    <AllGames games={this.state.games}/>
+                
+                </>
+            
         )
     }
   }

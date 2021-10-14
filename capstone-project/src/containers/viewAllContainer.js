@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import AllGames from '../components/allGames.js'
-import Card from "../components/card.js";
+
 
 
 class ViewAllContainer extends Component {
