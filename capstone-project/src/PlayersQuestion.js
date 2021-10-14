@@ -36,8 +36,8 @@ class PlayersQuestion extends Component {
     return (
         <div>
             <Nav/>
-            <h1>How many are playing today?</h1>
             <div class="button">
+            <h1>How many are playing today?</h1>
                 <button class="btn btn--alpha">
                     <span>
                         <button onClick={this.DecreaseItem}>-</button>

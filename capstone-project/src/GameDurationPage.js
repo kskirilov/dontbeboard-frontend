@@ -8,8 +8,8 @@ function Homepage() {
     return (
         <div>
             <Nav/>
-            <h1>How many are playing today?</h1>
             <div class="button">
+            <h1>How many are playing today?</h1>
                 <button class="btn btn--alpha"><span>30 minutes</span></button>
                 <button class="btn btn--alpha" id="secondButton"><span>Continue</span></button>
                 <p id="skip">Skip question</p>

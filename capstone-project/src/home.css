@@ -6,22 +6,32 @@ body {
     width: 100vw;
     display: flex;
     background-attachment: fixed;
-}
+  }
   
+  .container{
+    background-color: black;
+  }
   .button {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-align: center;
+    text-align: center; 
+    margin: 4px;
   }
 
+  
   h1{
+    margin-bottom:20px;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow:  0 0 30px black, 0 0 50px #0000FF;
   }
   
   .btn {
@@ -29,7 +39,7 @@ body {
     font-weight: 900;
     padding: 1.25rem 2rem;
     font-size: 1rem;
-    /* border-radius: 3.5rem/100%; */
+    border-radius: 3.5rem/100%;
     position: relative;
     min-width: 15rem;
     max-width: 90vw;
@@ -38,9 +48,8 @@ body {
     cursor: pointer;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    transition: all 330ms;
-    margin-left: 2em;
-    margin-right: 2em;
+    transition: all;
+    
   }
 
 #keepOnHover{
@@ -53,40 +62,37 @@ body {
     z-index: 1;
   }
 
-  .btn:before {
+  /* .btn:before {
     content: "";
     background-color: #1B90B9;
-    /* opacity: 0.59; */
+     opacity: 0.59; 
     position: absolute;
-    top: 0;
-    right: 0px;
-    bottom: 0;
-    left: 0;
-    transform: scale(4) translateX(-100%);
-    transition: all 495ms ease-out;
-  }
-  .btn:hover:before, .btn:focus:before, .btn:active:before {
+    margin: 0px;
+    /* transform: scale(4) translateX(-100%);
+    transition: all 495ms ease-out; 
+  } */
+  /* .btn:hover:before, .btn:focus:before, .btn:active:before {
     transform: scale(4) translate(37%);
-  }
-  
+  } */
 
 /* alpha button */
 
   .btn--alpha {
-    background-color: #1b8fb988;
+    background-color:#FF10F0;
     color: white;
-    margin: 1%;
-
-    
+    margin: 0.75%;
   }
   .btn--alpha:before {
-    background-color: #B721FF;
+    background-color:black;
+    /* color: white;
+    margin: 1%; */
     /* background-image: linear-gradient(to right, #B721FF 30%, #fff 100%); */
-    position: absolute;
   }
   .btn--alpha:hover, .btn--alpha:focus, .btn--alpha:active {
+    background-color: #FF10F0;
     color: #21D4FD;
   }
+
 
   /* beta button */
   
@@ -97,8 +103,6 @@ body {
   
   .btn--beta:before {
     background-color: #2AF598;
-    background-image: linear-gradient(to right, #2AF598 30%, #08AEEA 100%);
-    position: absolute;
   }
   .btn--beta:hover, .btn--beta:focus, .btn--beta:active {
     color: #08AEEA;
@@ -119,13 +123,3 @@ body {
   #skip{
     color: white;
   }
-
-  /* .blackButton{
-    background-color: black;
-    color: white;
-  }
-  
-  .neonGreen{
-    background-color: white;
-    color:#39FF14;
-  } */

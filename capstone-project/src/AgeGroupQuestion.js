@@ -35,8 +35,8 @@ export class AgeGroupQuestion extends Component {
         return (
             <div>
                 <Nav/>
-                <h1>What kind of game are you looking for?</h1>
                 <div class="button">
+                <h1>What kind of game are you looking for?</h1>
                     <button class="btn btn--alpha" value="all" onClick={this.handleChange}>All</button>
                     <button class="btn btn--alpha" value="kids" onClick={this.handleChange}>Kids</button>
                     <button class="btn btn--alpha" value="teens" onClick={this.handleChange}>Teens</button>
