@@ -32,8 +32,9 @@ export class GameMoodQuestion extends Component {
         return (
             <div>
                 <Nav/>
-                <h1>What kind of game are you looking for?</h1>
+                <div class="container">
                 <div class="button">
+                    <h1>What kind of game are you looking for?</h1>
                     <button class="btn btn--alpha" value="fun" onClick={this.handleChange}>Fun</button>
                     <button class="btn btn--alpha" value="drinking" onClick={this.handleChange}>Drinking</button>
                     <button class="btn btn--alpha" value="competitive" onClick={this.handleChange}>Competitive</button>
@@ -57,8 +58,10 @@ export class GameMoodQuestion extends Component {
                 </div>
                 <Footer/>
             </div>
-        );
-    }
+            </div>
+            );
+        
+                  }
 }
 
 export default withRouter(GameMoodQuestion);

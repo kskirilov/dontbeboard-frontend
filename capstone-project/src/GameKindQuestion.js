@@ -45,8 +45,8 @@ export class GameKindQuestion extends Component {
         return (
             <div>
                 <Nav/>
-                <h1>What kind of game are you looking for?</h1>
                 <div class="button">
+                <h1>What kind of game are you looking for?</h1>
                     <button class="btn btn--alpha" value="all" onClick={this.handleChange}>All</button>
                     <button class="btn btn--alpha" value="cards" onClick={this.handleChange}>Cards</button>
                     <button class="btn btn--alpha" value="board" onClick={this.handleChange}>Board</button>

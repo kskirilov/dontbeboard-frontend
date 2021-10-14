@@ -37,8 +37,8 @@ export class DurationQuestion extends Component {
     return (
         <div>
             <Nav/>
-            <h1>How long do you have?</h1>
             <div class="button">
+            <h1>How long do you have?</h1>
                 <button class="btn btn--alpha">
                     <span>
                         <button onClick={this.DecreaseItem}>-</button>
