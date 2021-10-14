@@ -1,0 +1,17 @@
+.games-cards {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2em;
+    width: 100%;
+    height:fit-content;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    min-height: 80vw;
+}
+
+#games-found {
+    color: white;
+    background-color: black;
+}

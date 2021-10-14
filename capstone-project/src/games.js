@@ -10,8 +10,8 @@ function Games() {
     return (
         <div>
             <Nav />
-            <h1 id="games-found">Games Found</h1>
-            <div class="games-cards">
+            
+            <div>
                 <GamesContainer />
             </div>
             <Footer />
@@ -20,3 +20,4 @@ function Games() {
 }
 
 export default Games;
+

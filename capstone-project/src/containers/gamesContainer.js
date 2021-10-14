@@ -29,7 +29,9 @@ class GamesContainer extends Component {
         fetch('http://localhost:8080/api/games/'+this.state.players+'/'+this.state.duration+'/'+this.state.gameKind+'/'+this.state.gameMood+'/'+this.state.ageGroup)
             .then((response) => response.json())
             .then(data => this.setState({games: data, loaded: true}))
-            .catch(error => console.log(error))   
+            .catch(error => console.log(error)) 
+            
+        
     }
 
     
@@ -38,9 +40,11 @@ class GamesContainer extends Component {
 
         return (
             <>
-                
+                <h1 id="games-found">Games Found: {this.state.games.length}</h1>
+
+                <div class="games-cards">
                     <AllGames games={this.state.games}/>
-                
+                </div>
                 </>
             
         )
