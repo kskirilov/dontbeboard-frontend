@@ -10,6 +10,7 @@ import GameMoodQuestion from './GameMoodQuestion';
 import AgeGroupQuestion from './AgeGroupQuestion'
 import ViewAll from './viewAll';
 import SingleGame from './SingleGame';
+import AddGame from './AddGame';
 
 
 
@@ -26,6 +27,7 @@ function App() {
       <Route path="/h5/" component={AgeGroupQuestion}/>
       <Route path="/games" component={Games}/>
       <Route path="/about" component={About} exact />
+      <Route path="/add" component={AddGame} exact />
       <Route path="/results" component={Results} exact />
       <Route path="/view-all" component={ViewAll} exact />
       <Route path="/single-game" component={SingleGame} exact />

@@ -19,13 +19,14 @@ export class AgeGroupQuestion extends Component {
           players: this.props.location.state.players,
           gameKind: this.props.location.state.gameKind,
           gameMood: this.props.location.state.gameMood,
-          ageGroup: 'all',
+          ageGroup: "",
           bgColorAll: "#FF10F0",
           bgColorKids: "#FF10F0",
           bgColorTeens: "#FF10F0",
           bgColorAdult: "#FF10F0",
           bgColorFamily: "#FF10F0"
         };
+        
         this.handleChangeAll = this.handleChangeAll.bind(this);
         this.handleChangeKids = this.handleChangeKids.bind(this);
         this.handleChangeTeens = this.handleChangeTeens.bind(this);
@@ -92,9 +93,9 @@ export class AgeGroupQuestion extends Component {
                     <button class="btn btn--alpha" style={{backgroundColor: this.state.bgColorTeens}} value="teens" onClick={this.handleChangeTeens}>Teens</button>
                     <button class="btn btn--alpha" style={{backgroundColor: this.state.bgColorAdult}} value="adult" onClick={this.handleChangeAdult}>Adult (18+)</button>
                     <button class="btn btn--alpha" style={{backgroundColor: this.state.bgColorFamily}} value="family" onClick={this.handleChangeFamily}>Family</button>
-
                     <Link to={{
-                        pathname: '/games/'+this.state.players+"/"+this.state.duration+"/"+this.state.gameKind+"/"+this.state.gameMood+"/"+this.state.ageGroup,
+                        pathname: '/games/?playerCount='+this.state.players+'&avgDuration='+this.state.duration+'&gameKind='+this.state.gameKind+'&gameMood='+this.state.gameMood+'&ageGroup='+this.state.ageGroup,
+                        // '/games/'+this.state.players+"/"+this.state.duration+"/"+this.state.gameKind+"/"+this.state.gameMood+"/"+this.state.ageGroup,
                         state: {
                             players: this.state.players, 
                             duration: this.state.duration,
@@ -105,9 +106,6 @@ export class AgeGroupQuestion extends Component {
                     }}>   
                     <button class="btn btn--alpha"><span>Continue</span></button>
                     </Link>
-
-
-                    
                 </div>
                 </div>
                 <Footer/>

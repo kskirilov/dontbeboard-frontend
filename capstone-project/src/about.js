@@ -98,6 +98,7 @@ onGameSubmission(evt) {
       gameMood: this.state.gameMood,
       ageGroup: this.state.ageGroup
   }
+
   this.addNewGame(newGame);
   this.setState({gameName: "",
   gamePhoto: "",
@@ -131,62 +132,47 @@ addNewGame(newGame){
         <div class="background">
   <div class="container">
     <div class="screen">
-      <div class="screen-header">
-        <div class="screen-header-left">
-          <div class="screen-header-button close"></div>
-          <div class="screen-header-button maximize"></div>
-          <div class="screen-header-button minimize"></div>
-        </div>
-        <div class="screen-header-right">
-          <div class="screen-header-ellipsis"></div>
-          <div class="screen-header-ellipsis"></div>
-          <div class="screen-header-ellipsis"></div>
-        </div>
-      </div>
       <div class="screen-body">
         <div class="screen-body-item left">
-          <div class="app-title">
-          <span>♞ DontBeBoard.</span>
-            <span>SUBMIT A GAME</span>
-            </div>
+          <div class="app-title"> ♞ DontBeBoard. <br/> ADD A GAME </div>
         <div class="screen-body-item">
-          <div class="app-form">
+          <div class="app-form" onSubmit={this.onGameSubmission}>
             <div class="app-form-group">
-              <input class="app-form-control" value={this.gameName} placeholder="NAME" onChange={this.onGameNameChange}></input>
+              <input class="app-form-control" value={this.gameName} placeholder="NAME" onChange={this.onGameNameChange} required></input>
             </div>
             <div class="app-form-group">
-              <input class="app-form-control" value={this.minPlayers} placeholder="MINIMUM NUMBER OF PLAYERS" onChange={this.onMinPlayersChange}></input>
+              <input class="app-form-control" value={this.minPlayers} placeholder="MINIMUM PLAYERS" onChange={this.onMinPlayersChange} required></input>
             </div>
             <div class="app-form-group">
-              <input class="app-form-control" value={this.maxPlayers} placeholder="MAXIMUM NUMBER OF PLAYERS" onChange={this.onMaxPlayersChange}></input>
+              <input class="app-form-control" value={this.maxPlayers} placeholder="MAXIMUM PLAYERS" onChange={this.onMaxPlayersChange} required></input>
             </div>
             <div class="app-form-group">
-              <input class="app-form-control" value={this.gameKind} placeholder="TYPE" onChange={this.onGameKindChange}></input>
+              <input class="app-form-control" value={this.avgDuration} placeholder="ESTIMATED PLAY TIME" onChange={this.onAvgDurationChange} required></input>
             </div>
             <div class="app-form-group">
-              <input class="app-form-control" value={this.gameMood} placeholder="GAME MOOD" onChange={this.onGameMoodChange}></input>
+              <input class="app-form-control" value={this.gameKind} placeholder="TYPE" onChange={this.onGameKindChange} required></input>
             </div>
             <div class="app-form-group">
-              <input class="app-form-control" value={this.ageGroup} placeholder="AGE" onChange={this.onAgeGroupChange}></input>
+              <input class="app-form-control" value={this.gameMood} placeholder="GAME MOOD" onChange={this.onGameMoodChange} required></input>
             </div>
             <div class="app-form-group">
-              <input class="app-form-control" value={this.avgDuration} placeholder="ESTIMATED PLAY TIME" onChange={this.onAvgDurationChange}></input>
+              <input class="app-form-control" value={this.ageGroup} placeholder="AGE" onChange={this.onAgeGroupChange} required></input>
             </div>
             <div class="app-form-group">
-              <input class="app-form-control" value={this.gameDescription} placeholder="DESCRIPTION" onChange={this.onGameDescriptionChange}></input>
+              <input class="app-form-control" value={this.gameDescription} placeholder="DESCRIPTION" onChange={this.onGameDescriptionChange} required></input>
             </div>
             <div class="app-form-group">
-              <input class="app-form-control" value={this.releaseDate} placeholder="RELEASE DATE" onChange={this.onReleaseDateChange}></input>
+              <input class="app-form-control" value={this.releaseDate} placeholder="RELEASE DATE" onChange={this.onReleaseDateChange} required></input>
             </div>
             <div class="app-form-group">
-              <input class="app-form-control" value={this.gamePhoto} placeholder="PHOTO" onChange={this.onGamePhotoChange}></input>
+              <input class="app-form-control" value={this.gamePhoto} placeholder="PHOTO" onChange={this.onGamePhotoChange} required></input>
             </div>
             <div class="app-form-group">
-              <input class="app-form-control" value={this.gameRules} placeholder="RULES" onChange={this.onGameRulesChange}></input>
+              <input class="app-form-control" value={this.gameRules} placeholder="RULES" onChange={this.onGameRulesChange} required></input>
             </div>
             <div class="app-form-group buttons">
-              <button class="app-form-button">CANCEL</button>
-              <button class="app-form-button" onClick={this.onGameSubmission}>SUBMIT</button>
+              {/* <button class="app-form-button">CANCEL</button> */}
+              <button class="app-form-button" type="submit">SUBMIT</button>
             </div>
           </div>
         </div>
