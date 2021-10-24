@@ -26,7 +26,8 @@ export class AddGame extends React.Component {
         releaseDate: "",
         gameKind: "",
         gameMood: "",
-        ageGroup: ""
+        ageGroup: "",
+        gameCost: ""
       };
   
 
@@ -78,7 +79,9 @@ export class AddGame extends React.Component {
             avgDuration: this.state.avgDuration,
             gameKind: this.state.gameKind,
             gameMood: this.state.gameMood,
-            ageGroup: this.state.ageGroup
+            ageGroup: this.state.ageGroup,
+            gameCost: this.state.gameCost,
+            isStandardCards: this.state.isStandardCards
         }
       
         this.addNewGame(newGame);
@@ -88,12 +91,14 @@ export class AddGame extends React.Component {
             gameDescription: "",
             gameRules: "",
             releaseDate: "",
-            minPlayers: "",
-            maxPlayers: "",
-            avgDuration: "",
+            minPlayers: 2,
+            maxPlayers: 4,
+            avgDuration: 45,
             gameKind: "",
             gameMood: "",
-            ageGroup: ""
+            ageGroup: "",
+            gameCost: "",
+            isStandardCards: false
       });
         
       }
@@ -128,16 +133,16 @@ export class AddGame extends React.Component {
             <div class="prompt">Game name: <input class="app-form-control" placeholder="monopoly" name="gameName" type="text" value={this.state.gameName} onChange={this.handleInputChange} required/></div>
             </label>
             <label class="app-form-group">
-            <div class="prompt">Game photo (URL): <input class="app-form-control" placeholder="www.yourlink.com" name="gamePhoto" type="text" value={this.state.gamePhoto} onChange={this.handleInputChange} required/></div>
+            <div class="prompt">Game photo (URL): <input class="app-form-control" placeholder="www.yourlink.com" name="gamePhoto" type="text" value={this.state.gamePhoto} onChange={this.handleInputChange}/></div>
             </label>
             <label class="app-form-group">
-            <div class="prompt">Minimum players <input class="app-form-control" name="minPlayers" type="number" value={this.state.minPlayers} onChange={this.handleInputChange} required/></div>
+            <div class="prompt">Minimum players <input class="app-form-control" name="minPlayers" type="number" value={this.state.minPlayers} onChange={this.handleInputChange}/></div>
             </label>
             <label class="app-form-group">
-            <div class="prompt">Maximum players: <input class="app-form-control" name="maxPlayers" type="number" value={this.state.maxPlayers} onChange={this.handleInputChange} required/></div>
+            <div class="prompt">Maximum players: <input class="app-form-control" name="maxPlayers" type="number" value={this.state.maxPlayers} onChange={this.handleInputChange}/></div>
             </label>
             <label class="app-form-group"> 
-            <div class="prompt">Estimated duration (minutes): <input class="app-form-control" name="avgDuration" type="number" value={this.state.avgDuration} onChange={this.handleInputChange} required/></div>
+            <div class="prompt">Estimated duration (minutes): <input class="app-form-control" name="avgDuration" type="number" value={this.state.avgDuration} onChange={this.handleInputChange}/></div>
             </label>
 
         <div class="radioButtons">
@@ -183,14 +188,17 @@ export class AddGame extends React.Component {
 
         {/* DESCRIPTION, RULES, RELEASE DATE */}
             <div class="app-form-group">
-            <div class="prompt">Game description: <input class="app-form-control" placeholder="qwdwqd" name="gameDescription" type="text" value={this.state.gameDescription} onChange={this.handleInputChange} required/></div>
+            <div class="prompt">Game description: <input class="app-form-control" placeholder="" name="gameDescription" type="text" value={this.state.gameDescription} onChange={this.handleInputChange}/></div>
             </div>
             <div class="app-form-group">
-            <div class="prompt">Game rules: <input class="app-form-control" placeholder="qwdwqd" name="gameRules" type="text" value={this.state.gameRules} onChange={this.handleInputChange} /></div>
+            <div class="prompt">Game rules: <input class="app-form-control" placeholder="" name="gameRules" type="text" value={this.state.gameRules} onChange={this.handleInputChange} /></div>
             </div>
             <div class="app-form-group">
             <div class="prompt">Release date: <input class="app-form-control" name="releaseDate" type="date" value={this.state.releaseDate} onChange={this.handleInputChange} /></div>
                          {/* <div> The release date of the game is : {this.state.releaseDate} </div> */}
+            </div>
+            <div class="app-form-group">
+            <div class="prompt">Game cost: <input class="app-form-control" placeholder="19.99" name="gameCost" type="number" value={this.state.gameCost} onChange={this.handleInputChange}/></div>
             </div>
 
             <div class="app-form-group buttons">
