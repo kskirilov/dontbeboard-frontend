@@ -99,7 +99,7 @@ export class AddGame extends React.Component {
       }
 
     addNewGame(newGame){
-        fetch("http://localhost:8080/api/games",{
+        fetch("http://localhost:8080/api/suggestions",{
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'
