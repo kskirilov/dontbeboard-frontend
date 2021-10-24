@@ -198,7 +198,7 @@ export class AddGame extends React.Component {
                          {/* <div> The release date of the game is : {this.state.releaseDate} </div> */}
             </div>
             <div class="app-form-group">
-            <div class="prompt">Game cost: <input class="app-form-control" placeholder="19.99" name="gameCost" type="number" value={this.state.gameCost} onChange={this.handleInputChange}/></div>
+            <div class="prompt">Game cost: <input class="app-form-control" pattern="^\d*(\.\d{0,2})?$" min="0" value="0" step="0.01" placeholder="19.99" name="gameCost" type="number" value={this.state.gameCost} onChange={this.handleInputChange}/></div>
             </div>
 
             <div class="app-form-group buttons">
