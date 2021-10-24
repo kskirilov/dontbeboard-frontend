@@ -26,8 +26,7 @@ function App() {
       <Route path="/h4/" component={GameMoodQuestion}/>
       <Route path="/h5/" component={AgeGroupQuestion}/>
       <Route path="/games" component={Games}/>
-      <Route path="/about" component={About} exact />
-      <Route path="/add" component={AddGame} exact />
+      <Route path="/add-game" component={AddGame} exact />
       <Route path="/results" component={Results} exact />
       <Route path="/view-all" component={ViewAll} exact />
       <Route path="/single-game" component={SingleGame} exact />

@@ -22,13 +22,20 @@ export class AddGame extends React.Component {
         avgDuration: 45,
         gameRules: "",
         gameDescription: "",
-        isStandardCards: false
+        isStandardCards: false,
+        releaseDate: "",
+        gameKind: "",
+        gameMood: "",
+        ageGroup: ""
       };
   
+
       this.handleInputChange = this.handleInputChange.bind(this);
       this.onGameKindChange = this.onGameKindChange.bind(this);
       this.onGameMoodChange = this.onGameMoodChange.bind(this);
       this.onAgeGroupChange = this.onAgeGroupChange.bind(this);
+      this.addNewGame = this.addNewGame.bind(this);
+      this.onGameSubmission = this.onGameSubmission.bind(this);
 
     }
   
@@ -44,206 +51,159 @@ export class AddGame extends React.Component {
     
     onGameKindChange(event) {
         this.setState({
-            selectedGameKind: event.target.value
+            gameKind: event.target.value
         });
     }
     onGameMoodChange(event) {
         this.setState({
-            selectedGameMood: event.target.value
+            gameMood: event.target.value
         });
     }
     onAgeGroupChange(event) {
         this.setState({
-            selectedAgeGroup: event.target.value
+            ageGroup: event.target.value
         });
     }
 
+    onGameSubmission(evt) {
+        evt.preventDefault();
+        const newGame = {
+            gameName: this.state.gameName,
+            gamePhoto: this.state.gamePhoto,
+            gameDescription: this.state.gameDescription,
+            gameRules: this.state.gameRules,
+            releaseDate: this.state.releaseDate,
+            minPlayers: this.state.minPlayers,
+            maxPlayers: this.state.maxPlayers,
+            avgDuration: this.state.avgDuration,
+            gameKind: this.state.gameKind,
+            gameMood: this.state.gameMood,
+            ageGroup: this.state.ageGroup
+        }
+      
+        this.addNewGame(newGame);
+        this.setState({
+            gameName: "",
+            gamePhoto: "",
+            gameDescription: "",
+            gameRules: "",
+            releaseDate: "",
+            minPlayers: "",
+            maxPlayers: "",
+            avgDuration: "",
+            gameKind: "",
+            gameMood: "",
+            ageGroup: ""
+      });
+        
+      }
+
+    addNewGame(newGame){
+        fetch("http://localhost:8080/api/games",{
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(newGame)
+        })
+    }
 
     render() {
       return (
         <>
+
         <Nav/>
-        {/* <div class="background">
+        <div class="background">
         <div class="container">
         <div class="screen">   
         <div class="screen-body">
-        <div class="app-form" onSubmit={this.onGameSubmission}>
-        <form>
+        <div class="app-form">
+        <form onSubmit={this.onGameSubmission}>
         <div class="screen-body-item left">
-        <div class="app-title"> ♞ DontBeBoard. <br/> ADD A GAME  </div>
-        <div class="screen-body-item"> */}
-        <form>
+        <div class="app-title"> ♞ DontBeBoard. <br/> SUGGEST A GAME  </div>
+        <div class="screen-body-item">
+
+            {/* GAME NAME, PHOTO, PLAYERS, DURATION */}
             <label class="app-form-group"> 
-                Game name:
-                <input class="app-form-control" placeholder="monopoly" name="gameName" type="text" value={this.state.gameName} onChange={this.handleInputChange} />
+            <div class="prompt">Game name: <input class="app-form-control" placeholder="monopoly" name="gameName" type="text" value={this.state.gameName} onChange={this.handleInputChange} required/></div>
             </label>
             <label class="app-form-group">
-                Game photo (URL):
-                <input class="app-form-control" placeholder="www.yourlink.com" name="gamePhoto" type="text" value={this.state.gamePhoto} onChange={this.handleInputChange} />
+            <div class="prompt">Game photo (URL): <input class="app-form-control" placeholder="www.yourlink.com" name="gamePhoto" type="text" value={this.state.gamePhoto} onChange={this.handleInputChange} required/></div>
             </label>
-            <label>
-                Minimum players <input name="minimumPlayers" type="number" value={this.state.minPlayers} onChange={this.handleInputChange} />
+            <label class="app-form-group">
+            <div class="prompt">Minimum players <input class="app-form-control" name="minPlayers" type="number" value={this.state.minPlayers} onChange={this.handleInputChange} required/></div>
             </label>
-            <label>
-                Maximum players:
-                <input class="app-form-control" name="maximumPlayers" type="number" value={this.state.maxPlayers} onChange={this.handleInputChange} />
+            <label class="app-form-group">
+            <div class="prompt">Maximum players: <input class="app-form-control" name="maxPlayers" type="number" value={this.state.maxPlayers} onChange={this.handleInputChange} required/></div>
             </label>
-            <label>
-                Estimated duration (minutes):
-                <input class="app-form-control" name="estimatedDuration" type="number" value={this.state.avgDuration} onChange={this.handleInputChange} />
+            <label class="app-form-group"> 
+            <div class="prompt">Estimated duration (minutes): <input class="app-form-control" name="avgDuration" type="number" value={this.state.avgDuration} onChange={this.handleInputChange} required/></div>
             </label>
-    {/* GAME TYPE */}
-            <br/>
-            What's the type of this game?              
+
+        <div class="radioButtons">
+            {/* RADIO 1: GAME TYPE */}
+            <div class="app-form-group">
+            <div class="prompt">What's the type of this game?</div>   
+                     
             <div className="radio">
-                <input type="radio" value="board" checked={this.state.selectedGameKind === "Board"} onChange={this.onGameKindChange}/><span>Board</span>
-                <input type="radio" value="cards" checked={this.state.selectedGameKind === "Cards"} onChange={this.onGameKindChange}/><span>Card</span>
-                <input type="radio" value="videoGame" checked={this.state.selectedGameKind === "Video Game"} onChange={this.onGameKindChange}/><span>Video Game</span>
-                <input type="radio" value="noEquipment" checked={this.state.selectedGameKind === "No Equipment"} onChange={this.onGameKindChange}/><span>No Equipment/Other</span>
-            <div>
-            Selected option is : {this.state.selectedGameKind}
-            
+                <input type="radio" value="board" checked={this.state.gameKind === "board"} onChange={this.onGameKindChange}/><span>Board</span>
+                <input type="radio" value="card" checked={this.state.gameKind === "card"} onChange={this.onGameKindChange}/><span>Card</span>
+                <input type="radio" value="videoGame" checked={this.state.gameKind === "videoGame"} onChange={this.onGameKindChange}/><span>Video Game</span>
+                <input type="radio" value="noEquipment" checked={this.state.gameKind === "noEquipment"} onChange={this.onGameKindChange}/><span>No Equipment/Other</span>
+                <div>Tick here if standard card deck: <input name="isStandardCards" type="checkbox" checked={this.state.isStandardCards} onChange={this.handleInputChange} /></div>
             </div>
-                Tick here if standard card deck: 
-                <input name="isStandardCards" type="checkbox" checked={this.state.isStandardCards} onChange={this.handleInputChange} />
             </div>
+             {/* <div> The type is : {this.state.selectedGameKind} </div> */}
 
-    {/* GAME MOOD */}
-        <div class="app-form-group">
-            <br/>
-            What mood do you associate with playing this game?
+
+            {/* RADIO 2: GAME MOOD */}
+            <div class="app-form-group">
+            <div class="prompt">What mood do you associate with playing this game?</div>
             <div className="radio"> 
-                <input
-                type="radio"
-                value="fun"
-                checked={this.state.selectedGameMood === "Fun"}
-                onChange={this.onGameMoodChange}
-                />
-                <span>Fun</span>
-                <input
-                type="radio"
-                value="drinking"
-                checked={this.state.selectedGameMood === "Drinking"}
-                onChange={this.onGameMoodChange}
-                />
-                <span>Drinking</span>
-                <input
-                type="radio"
-                value="strategy"
-                checked={this.state.selectedGameMood === "Strategy"}
-                onChange={this.onGameMoodChange}
-                />
-                <span>Strategy</span>
-                <input
-                type="radio"
-                value="competitive"
-                checked={this.state.selectedGameMood === "Competitive"}
-                onChange={this.onGameMoodChange}
-                />
-                <span>Competitive</span>
-                <input
-                type="radio"
-                value="other"
-                checked={this.state.selectedGameMood === "Other"}
-                onChange={this.onGameMoodChange}
-                />
-                Other
-            {/* <div>
-            Selected option is : {this.state.selectedGameMood}
-            </div> */}
-            <br/>
+                <input type="radio" value="fun" checked={this.state.gameMood === "fun"} onChange={this.onGameMoodChange}/><span>Fun</span>
+                <input type="radio" value="drinking" checked={this.state.gameMood === "drinking"} onChange={this.onGameMoodChange}/><span>Drinking</span>
+                <input type="radio" value="strategy" checked={this.state.gameMood === "strategy"} onChange={this.onGameMoodChange}/><span>Strategy</span>
+                <input type="radio" value="competitive" checked={this.state.gameMood === "competitive"} onChange={this.onGameMoodChange}/><span>Competitive</span>
+                <input type="radio" value="other" checked={this.state.gameMood === "other"} onChange={this.onGameMoodChange}/><span>Other</span>
             </div>
-        </div>
+            </div>
 
 
-    {/* AGE GROUP */}
-    <div class="app-form-group">
-            <br/>
-            What is the appropriate age for this game?
+            {/* RADIO 3: AGE GROUP */}
+            <div class="app-form-group">
+            <div class="prompt">What is the appropriate age for this game?</div>
             <div className="radio"> 
-                <input
-                type="radio"
-                value="any"
-                checked={this.state.selectedAgeGroup === "Any age"}
-                onChange={this.onAgeGroupChange}
-                />
-                <span>Any age</span>
-                <input
-                type="radio"
-                value="kids"
-                checked={this.state.selectedAgeGroup === "Kids"}
-                onChange={this.onAgeGroupChange}
-                />
-                <span>Kids</span>
-                <input
-                type="radio"
-                value="family"
-                checked={this.state.selectedAgeGroup === "Family"}
-                onChange={this.onAgeGroupChange}
-                />
-                <span>Family</span>
-                <input
-                type="radio"
-                value="adult"
-                checked={this.state.selectedAgeGroup === "Adult"}
-                onChange={this.onAgeGroupChange}
-                />
-                <span>Adult</span>
-            {/* <div>
-            Selected option is : {this.state.selectedAgeGroup}
-            </div> */}
-        </div>
+                <input type="radio" value="all" checked={this.state.ageGroup === "all"} onChange={this.onAgeGroupChange}/><span>Any age</span>
+                <input type="radio" value="kids" checked={this.state.ageGroup === "kids"} onChange={this.onAgeGroupChange}/><span>Kids</span>
+                <input type="radio" value="family" checked={this.state.ageGroup === "family"} onChange={this.onAgeGroupChange}/><span>Family</span>
+                <input type="radio" value="adult" checked={this.state.ageGroup === "adult"} onChange={this.onAgeGroupChange}/><span>Adult</span>
+            </div>
+            </div>
         </div>
 
-    {/* DESCRIPTION, RULES, RELEASE DATE */}
+        {/* DESCRIPTION, RULES, RELEASE DATE */}
             <div class="app-form-group">
-                    Game description:
-                    <input class="app-form-control"
-                    placeholder="qwdwqd"
-                    name="gameDescription"
-                    type="text"
-                    value={this.state.gameDescription}
-                    onChange={this.handleInputChange} />
+            <div class="prompt">Game description: <input class="app-form-control" placeholder="qwdwqd" name="gameDescription" type="text" value={this.state.gameDescription} onChange={this.handleInputChange} required/></div>
             </div>
             <div class="app-form-group">
-                    Game rules:
-                    <input class="app-form-control"
-                    placeholder="qwdwqd"
-                    name="gameRules"
-                    type="text"
-                    value={this.state.gameRules}
-                    onChange={this.handleInputChange} />
+            <div class="prompt">Game rules: <input class="app-form-control" placeholder="qwdwqd" name="gameRules" type="text" value={this.state.gameRules} onChange={this.handleInputChange} /></div>
             </div>
-            <div>
-            The rules are: {this.state.gameRules}
-            </div>
-        
-            <br/>
             <div class="app-form-group">
-                Release date:
-                <input class="app-form-control"
-                name="releaseDate"
-                type="date"
-                value={this.state.releaseDate}
-                onChange={this.handleInputChange} />
-            {/* <div>
-            The release date of the game is : {this.state.releaseDate}
-            </div> */}
+            <div class="prompt">Release date: <input class="app-form-control" name="releaseDate" type="date" value={this.state.releaseDate} onChange={this.handleInputChange} /></div>
+                         {/* <div> The release date of the game is : {this.state.releaseDate} </div> */}
             </div>
-            <br/>
+
             <div class="app-form-group buttons">
                 <input class="app-form-button" type="submit" value="Submit" />
             </div>
+        </div>
+        </div>
         </form>
-{/* 
-        </div>
-        </div>
-            </form>
         </div>
         </div>
         </div>
         </div>
-        </div> */}
+        </div>
         </>
       );
     }
