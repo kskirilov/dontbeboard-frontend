@@ -83,8 +83,8 @@ export class AddGame extends React.Component {
             gameCost: this.state.gameCost,
             isStandardCards: this.state.isStandardCards
         }
-      
         this.addNewGame(newGame);
+        alert("Your suggestion for "+ gameName + " was successfully submitted");
         this.setState({
             gameName: "",
             gamePhoto: "",
@@ -104,7 +104,7 @@ export class AddGame extends React.Component {
       }
 
     addNewGame(newGame){
-        fetch("http://localhost:8080/api/suggestions",{
+        fetch("https://dontbeboard-backend.herokuapp.com/api/suggestions",{
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'

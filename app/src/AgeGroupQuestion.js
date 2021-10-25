@@ -19,7 +19,7 @@ export class AgeGroupQuestion extends Component {
           players: this.props.location.state.players,
           gameKind: this.props.location.state.gameKind,
           gameMood: this.props.location.state.gameMood,
-          ageGroup: "",
+          ageGroup: "all",
           bgColorAll: "#FF10F0",
           bgColorKids: "#FF10F0",
           bgColorTeens: "#FF10F0",

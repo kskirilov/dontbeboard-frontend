@@ -17,7 +17,7 @@ export class GameMoodQuestion extends Component {
           duration: this.props.location.state.duration,
           players: this.props.location.state.players,
           gameKind: this.props.location.state.gameKind,
-          gameMood: "fun",
+          gameMood: "all",
           bgColorFun: "#FF10F0",
           bgColorDrinking: "#FF10F0",
           bgColorCompetitive: "#FF10F0",
@@ -69,16 +69,6 @@ export class GameMoodQuestion extends Component {
         bgColorPhysicalActivity: "#FF10F0"});
       }
 
-      handleChangePhysicalActivity(event) {
-        this.setState({gameMood: event.target.value});
-        this.setState({bgColorFun: "#FF10F0",
-        bgColorDrinking: "#FF10F0",
-        bgColorCompetitive: "#FF10F0",
-        bgColorStrategy: "#FF10F0",
-        bgColorPhysicalActivity: "lightblue"});
-      }
-
-
     render() {
         return (
             <div>
@@ -90,7 +80,6 @@ export class GameMoodQuestion extends Component {
                     <button class="btn btn--alpha" style={{backgroundColor: this.state.bgColorDrinking}} value="drinking" onClick={this.handleChangeDrinking}>Drinking</button>
                     <button class="btn btn--alpha" style={{backgroundColor: this.state.bgColorCompetitive}} value="competitive" onClick={this.handleChangeCompetitive}>Competitive</button>
                     <button class="btn btn--alpha" style={{backgroundColor: this.state.bgColorStrategy}} value="strategy" onClick={this.handleChangeStrategy}>Strategy</button>
-                    <button class="btn btn--alpha" style={{backgroundColor: this.state.bgColorPhysicalActivity}} value="physicalActivity" onClick={this.handleChangePhysicalActivity}>Physical activity</button>
 
                     <Link to={{
                         pathname: '/h5/'+this.state.gameMood,
