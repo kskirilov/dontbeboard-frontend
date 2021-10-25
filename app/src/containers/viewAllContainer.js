@@ -21,7 +21,7 @@ class ViewAllContainer extends Component {
     }
 
     getGamesData() {
-        fetch('http://localhost:8080/api/games')
+        fetch('https://dontbeboard-backend.herokuapp.com/api/games')
             .then((response) => response.json())
             .then(data => this.setState({games: data, loaded: true}))
             .catch(error => console.log(error))   
