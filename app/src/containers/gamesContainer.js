@@ -25,6 +25,7 @@ class GamesContainer extends Component {
        this.getGamesData();
     }
 
+    //hm?
     getGamesData() {
         fetch('https://dontbeboard-backend.herokuapp.com/api/games/?playerCount='+this.state.players+'&avgDuration='+this.state.duration+'&gameKind='+this.state.gameKind+'&gameMood='+this.state.gameMood+'&ageGroup='+this.state.ageGroup)
             .then((response) => response.json())
