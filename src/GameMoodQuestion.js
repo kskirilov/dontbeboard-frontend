@@ -30,7 +30,6 @@ export class GameMoodQuestion extends Component {
         this.handleChangeDrinking = this.handleChangeDrinking.bind(this);
         this.handleChangeCompetitive = this.handleChangeCompetitive.bind(this);
         this.handleChangeStrategy = this.handleChangeStrategy.bind(this);
-        this.handleChangePhysicalActivity = this.handleChangePhysicalActivity.bind(this);   
       };
 
       handleChangeFun(event) {
@@ -38,8 +37,7 @@ export class GameMoodQuestion extends Component {
         this.setState({bgColorFun: "lightblue",
         bgColorDrinking: "#FF10F0",
         bgColorCompetitive: "#FF10F0",
-        bgColorStrategy: "#FF10F0",
-        bgColorPhysicalActivity: "#FF10F0"})
+        bgColorStrategy: "#FF10F0"})
       }
       
       handleChangeDrinking(event) {

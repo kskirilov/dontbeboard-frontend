@@ -84,7 +84,7 @@ export class AddGame extends React.Component {
             isStandardCards: this.state.isStandardCards
         }
         this.addNewGame(newGame);
-        alert("Your suggestion for "+ gameName + " was successfully submitted");
+        alert("Your suggestion for "+ this.state.gameName + " was successfully submitted");
         this.setState({
             gameName: "",
             gamePhoto: "",
