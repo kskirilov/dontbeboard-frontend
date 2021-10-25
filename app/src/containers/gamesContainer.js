@@ -26,7 +26,7 @@ class GamesContainer extends Component {
     }
 
     getGamesData() {
-        fetch('http://localhost:8080/api/games/?playerCount='+this.state.players+'&avgDuration='+this.state.duration+'&gameKind='+this.state.gameKind+'&gameMood='+this.state.gameMood+'&ageGroup='+this.state.ageGroup)
+        fetch('https://dontbeboard-backend.herokuapp.com/api/games/?playerCount='+this.state.players+'&avgDuration='+this.state.duration+'&gameKind='+this.state.gameKind+'&gameMood='+this.state.gameMood+'&ageGroup='+this.state.ageGroup)
             .then((response) => response.json())
             .then(data => this.setState({games: data, loaded: true}))
             .catch(error => console.log(error)) 
