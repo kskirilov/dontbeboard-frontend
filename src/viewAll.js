@@ -7,7 +7,7 @@ function ViewAll() {
     return (
         <div>  
         <Nav />
-        <h1 id="game-name">All Games</h1>
+        {/* <h1 id="game-name">All Games</h1> */}
             <div class="cards">
                 <ViewAllContainer />
             </div>

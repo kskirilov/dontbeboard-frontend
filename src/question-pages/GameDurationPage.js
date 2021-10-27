@@ -1,6 +1,6 @@
 import '.questions.css'
-import Nav from '../components/nav.js';
-import Footer from '../components/footer.js';
+import Nav from '../common/nav.js';
+import Footer from '../common/footer.js';
 import { Link } from 'react-router-dom';
 
 function Homepage() { 

@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import AllGames from '../components/allGames.js'
+import AllGames from "../components/allGames";
 import { withRouter } from 'react-router'
 import './gamesContainer.css'
   
@@ -25,7 +25,7 @@ class GamesContainer extends Component {
        this.getGamesData();
     }
 
-    //hm?
+    
     getGamesData() {
         fetch('https://dontbeboard-backend.herokuapp.com/api/games/?playerCount='+this.state.players+'&avgDuration='+this.state.duration+'&gameKind='+this.state.gameKind+'&gameMood='+this.state.gameMood+'&ageGroup='+this.state.ageGroup)
             .then((response) => response.json())
@@ -33,7 +33,6 @@ class GamesContainer extends Component {
             .catch(error => console.log(error)) 
     }
 
-    
 
     render(){
 
@@ -44,7 +43,7 @@ class GamesContainer extends Component {
                 <div class="games-cards">
                     <AllGames games={this.state.games}/>
                 </div>
-                </>
+            </>
             
         )
     }
