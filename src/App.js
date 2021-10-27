@@ -1,17 +1,14 @@
-import './App.css';
 import { BrowserRouter, Route, Switch} from 'react-router-dom';
-import PlayersQuestion from './PlayersQuestion.js';
 import Games from './games.js';
-import About from './about.js';
 import Results from './components/results.js'
-import DurationQuestion from './DurationQuestion.js';
-import GameKindQuestion from './GameKindQuestion';
-import GameMoodQuestion from './GameMoodQuestion';
-import AgeGroupQuestion from './AgeGroupQuestion'
+import PlayersQuestion from './question-pages/PlayersQuestion.js';
+import DurationQuestion from './question-pages/DurationQuestion.js';
+import GameKindQuestion from './question-pages/GameKindQuestion.js';
+import GameMoodQuestion from './question-pages/GameMoodQuestion.js';
+import AgeGroupQuestion from './question-pages/AgeGroupQuestion.js';
 import ViewAll from './viewAll';
 import SingleGame from './SingleGame';
-import AddGame from './AddGame';
-
+import AddGame from './containers/AddGame.js';
 
 
 

@@ -1,7 +1,6 @@
-import Nav from './components/nav';
-import './about.css';
+import Nav from '../components/nav';
 import './addgame.css'
-import Footer from './components/footer.js';
+import Footer from '../components/footer.js';
 import {
     BrowserRouter as Router,
     Link,

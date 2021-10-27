@@ -1,6 +1,6 @@
-import './home.css'
-import Nav from './components/nav.js';
-import Footer from './components/footer.js';
+import './questions.css'
+import Nav from '../components/nav.js';
+import Footer from '../components/footer.js';
 
 import {
     BrowserRouter as Router,

@@ -1,4 +1,3 @@
-import './home.css';
 import Card from './components/card';
 import Nav from './components/nav.js';
 import Footer from './components/footer.js';
