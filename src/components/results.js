@@ -1,4 +1,3 @@
-import './results.css'
 import Card from './card';
 import Nav from './nav';
 

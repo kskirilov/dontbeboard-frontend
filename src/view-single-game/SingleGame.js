@@ -1,6 +1,6 @@
-import Card from './components/card';
-import Nav from './components/nav.js';
-import Footer from './components/footer.js';
+import card from '../components/card';
+import Nav from '../components/nav.js';
+import Footer from '../components/footer.js';
 import { BrowserRouter as Router,Link,museLocation} from "react-router-dom";
 import React, { Component } from 'react';
 import { withRouter } from 'react-router'

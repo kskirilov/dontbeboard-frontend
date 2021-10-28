@@ -1,9 +1,8 @@
-import Nav from './components/nav';
+import Nav from '../components/nav';
 import './games.css'
 import { useState } from 'react';
-
-import GamesContainer from './containers/gamesContainer';
-import Footer from './components/footer';
+import GamesContainer from './gamesContainer';
+// import footer from '../components/footer';
 
 function Games() {
 
@@ -14,7 +13,7 @@ function Games() {
             <div>
                 <GamesContainer />
             </div>
-            <Footer />
+            <footer />
         </div>
     );
 }

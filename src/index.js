@@ -1,3 +1,5 @@
+//CALLS MAIN REACT APP
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';

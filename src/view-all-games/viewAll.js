@@ -1,7 +1,7 @@
-import Nav from './components/nav';
-import Footer from './components/footer';
+import Nav from '../components/nav';
+import Footer from '../components/footer';
 import './viewAll.css'
-import ViewAllContainer from './containers/viewAllContainer';
+import ViewAllContainer from './viewAllContainer';
 
 function ViewAll() {
     return (
