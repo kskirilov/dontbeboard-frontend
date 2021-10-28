@@ -54,7 +54,7 @@ export class DurationQuestion extends Component {
                       players: this.state.players, 
                       duration: this.state.duration}
                     }}>
-                    <button class="btn btn--alpha"><span>Continue</span></button>
+                    <button class="btn btn--alpha" id="btnContinue"><span>Continue</span></button>
                 </Link>
 
                 

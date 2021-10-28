@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import AllGames from '../components/allGames.js'
+import AllGames from "../components/allGames.js";
 
 
 class ViewAllContainer extends Component {

@@ -18,53 +18,67 @@ export class GameMoodQuestion extends Component {
           players: this.props.location.state.players,
           gameKind: this.props.location.state.gameKind,
           gameMood: "all",
-          bgColorFun: "#FF10F0",
-          bgColorDrinking: "#FF10F0",
-          bgColorCompetitive: "#FF10F0",
-          bgColorStrategy: "#FF10F0",
-          bgColorPhysicalActivity: "#FF10F0"
+          bgColorAll: "white",
+          bgColorFun: "white",
+          bgColorDrinking: "white",
+          bgColorCompetitive: "white",
+          bgColorStrategy: "white"
 
         };
-        
+        this.handleChangeAll = this.handleChangeAll.bind(this);
         this.handleChangeFun = this.handleChangeFun.bind(this);
         this.handleChangeDrinking = this.handleChangeDrinking.bind(this);
         this.handleChangeCompetitive = this.handleChangeCompetitive.bind(this);
         this.handleChangeStrategy = this.handleChangeStrategy.bind(this);
+
       };
+
+      handleChangeAll(event) {
+        this.setState({gameMood: event.target.value});
+        this.setState({bgColorAll: "#b27d50",
+        bgColorFun: "white",
+        bgColorDrinking: "white",
+        bgColorCompetitive: "white",
+        bgColorStrategy: "white"})
+      }
 
       handleChangeFun(event) {
         this.setState({gameMood: event.target.value});
-        this.setState({bgColorFun: "lightblue",
-        bgColorDrinking: "#FF10F0",
-        bgColorCompetitive: "#FF10F0",
-        bgColorStrategy: "#FF10F0"})
+        this.setState({bgColorAll: "white",
+        bgColorFun: "#b27d50",
+        bgColorDrinking: "white",
+        bgColorCompetitive: "white",
+        bgColorStrategy: "white"})
       }
       
       handleChangeDrinking(event) {
         this.setState({gameMood: event.target.value});
-        this.setState({bgColorFun: "#FF10F0",
-        bgColorDrinking: "lightblue",
-        bgColorCompetitive: "#FF10F0",
-        bgColorStrategy: "#FF10F0",
-        bgColorPhysicalActivity: "#FF10F0"});
+        this.setState({bgColorFun: "white",
+        bgColorAll: "white",
+        bgColorDrinking: "#b27d50",
+        bgColorCompetitive: "white",
+        bgColorStrategy: "white",
+        bgColorPhysicalActivity: "white"});
       }
 
       handleChangeCompetitive(event) {
         this.setState({gameMood: event.target.value});
-        this.setState({bgColorFun: "#FF10F0",
-        bgColorDrinking: "#FF10F0",
-        bgColorCompetitive: "lightblue",
-        bgColorStrategy: "#FF10F0",
-        bgColorPhysicalActivity: "#FF10F0"});
+        this.setState({bgColorFun: "white",
+        bgColorAll: "white",
+        bgColorDrinking: "white",
+        bgColorCompetitive: "#b27d50",
+        bgColorStrategy: "white",
+        bgColorPhysicalActivity: "white"});
       }
 
       handleChangeStrategy(event) {
         this.setState({gameMood: event.target.value});
-        this.setState({bgColorFun: "#FF10F0",
-        bgColorDrinking: "#FF10F0",
-        bgColorCompetitive: "#FF10F0",
-        bgColorStrategy: "lightblue",
-        bgColorPhysicalActivity: "#FF10F0"});
+        this.setState({bgColorFun: "white",
+        bgColorAll: "white",
+        bgColorDrinking: "white",
+        bgColorCompetitive: "white",
+        bgColorStrategy: "#b27d50",
+        bgColorPhysicalActivity: "white"});
       }
 
     render() {
@@ -78,6 +92,8 @@ export class GameMoodQuestion extends Component {
                     <button class="btn btn--alpha" style={{backgroundColor: this.state.bgColorDrinking}} value="drinking" onClick={this.handleChangeDrinking}>Drinking</button>
                     <button class="btn btn--alpha" style={{backgroundColor: this.state.bgColorCompetitive}} value="competitive" onClick={this.handleChangeCompetitive}>Competitive</button>
                     <button class="btn btn--alpha" style={{backgroundColor: this.state.bgColorStrategy}} value="strategy" onClick={this.handleChangeStrategy}>Strategy</button>
+                    <button class="btn btn--alpha" style={{backgroundColor: this.state.bgColorAll}} value="all" onClick={this.handleChangeAll}>All</button>
+
 
                     <Link to={{
                         pathname: '/h5/'+this.state.gameMood,
@@ -88,7 +104,7 @@ export class GameMoodQuestion extends Component {
                             gameMood: this.state.gameMood
                         }
                     }}>   
-                    <button class="btn btn--alpha"><span>Continue</span></button>
+                    <button class="btn btn--alpha" id="btnContinue"><span>Continue</span></button>
                     </Link>
 
 
