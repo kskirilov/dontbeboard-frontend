@@ -1,7 +1,7 @@
 import './footer.css'
 import { Link } from "react-router-dom";
 
-function footer() {
+function Footer() {
     return (
     
     
@@ -48,4 +48,4 @@ function footer() {
 
 }
 
-export default footer;
+export default Footer;

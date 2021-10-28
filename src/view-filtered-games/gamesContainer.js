@@ -38,7 +38,7 @@ class GamesContainer extends Component {
 
         return (
             <>
-                <h1 id="games-found">Games Found: {this.state.games.length}</h1>
+                <h1 id="games-found">{this.state.games.length} Games Found </h1>
 
                 <div class="games-cards">
                     <AllGames games={this.state.games}/>

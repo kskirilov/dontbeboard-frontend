@@ -32,8 +32,10 @@ class ViewAllContainer extends Component {
 
         return (
             <>
+            <div class="games-cards">
                 <AllGames games={this.state.games}/>
-            </>
+            </div>
+        </>
         )
     }
   }
