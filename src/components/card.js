@@ -36,7 +36,8 @@ function Card(props) {
                                 ageGroup: props.ageGroup,
                                 releaseDate: props.releaseDate,
                                 description: props.description,
-                                rules: props.rules
+                                rules: props.rules,
+                                cost: props.gameCost
                         }
                     }}> 
                     <button class="card-button"><span>See more information</span></button>

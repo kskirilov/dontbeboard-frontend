@@ -20,7 +20,8 @@ class SingleGame extends Component {
                 ageGroup: this.props.location.state.ageGroup,
                 releaseDate: this.props.location.state.releaseDate,
                 description: this.props.location.state.description,
-                rules: this.props.location.state.rules
+                rules: this.props.location.state.rules,
+                cost: this.props.location.state.gameCost
             }
         }
 
@@ -30,12 +31,12 @@ render() {
     return (
         <div>
             <Nav />
-            <h1 id="game-name">{this.state.name}</h1>
             <div class="flex-container">
                 <div class="image-container">
                     <img src={this.state.image} alt="Image of a game" />
                 </div>
                 <div class="info-container">
+                    <p id="game-title">{this.state.name}</p>
                     <p>Release date: {this.state.releaseDate}</p>
                     <p>Number of players: {this.state.minPlayers}-{this.state.maxPlayers}</p>
                     <p>Time to play: {this.state.time} minutes</p>
@@ -44,6 +45,7 @@ render() {
                     <p>Age group: {this.state.ageGroup}</p>
                     <p>Description: {this.state.description}</p>
                     <p>Rules: {this.state.rules}</p>
+                    <p> Cost: {this.state.gameCost}</p>
                 </div>
             </div>
             

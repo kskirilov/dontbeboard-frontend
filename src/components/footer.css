@@ -9,7 +9,7 @@
     background-color:#000;
     width: 100vw;
     height:fit-content;
-    
+    margin-top: 5%;
   }
 
   @media (max-width:720px) {

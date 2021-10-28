@@ -55,7 +55,7 @@ class PlayersQuestion extends Component {
                     pathname: '/h2/'+this.state.players,
                     state: this.state.players
                     }}>
-                    <button class="btn btn--alpha" id="secondButton"><span>Continue</span></button>
+                    <button class="btn btn--alpha" id="btnContinue"><span>Continue</span></button>
                 </Link>
 
                 </div>

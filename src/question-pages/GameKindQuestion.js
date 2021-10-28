@@ -18,11 +18,11 @@ export class GameKindQuestion extends Component {
           duration: this.props.location.state.duration,
           players: this.props.location.state.players,
           gameKind: "all",
-          bgColorAll: "#FF10F0",
-          bgColorCards: "#FF10F0",
-          bgColorBoard: "#FF10F0",
-          bgColorNoEquipment: "#FF10F0",
-          bgColorVideoGames: "#FF10F0"
+          bgColorAll: "white",
+          bgColorCards: "white",
+          bgColorBoard: "white",
+          bgColorNoEquipment: "white",
+          bgColorVideoGames: "white"
 
         };
         this.handleChangeAll = this.handleChangeAll.bind(this);
@@ -36,47 +36,47 @@ export class GameKindQuestion extends Component {
 
       handleChangeAll(event) {
         this.setState({gameKind: event.target.value});
-        this.setState({bgColorAll: "lightblue",
-        bgColorCards: "#FF10F0",
-        bgColorBoard: "#FF10F0",
-        bgColorNoEquipment: "#FF10F0",
-        bgColorVideoGames: "#FF10F0"})
+        this.setState({bgColorAll: "#b27d50",
+        bgColorCards: "white",
+        bgColorBoard: "white",
+        bgColorNoEquipment: "white",
+        bgColorVideoGames: "white"})
       }
       
       handleChangeCards(event) {
         this.setState({gameKind: event.target.value});
-        this.setState({bgColorAll: "#FF10F0",
-        bgColorCards: "lightblue",
-        bgColorBoard: "#FF10F0",
-        bgColorNoEquipment: "#FF10F0",
-        bgColorVideoGames: "#FF10F0"});
+        this.setState({bgColorAll: "white",
+        bgColorCards: "#b27d50",
+        bgColorBoard: "white",
+        bgColorNoEquipment: "white",
+        bgColorVideoGames: "white"});
       }
 
       handleChangeBoard(event) {
         this.setState({gameKind: event.target.value});
-        this.setState({bgColorAll: "#FF10F0",
-        bgColorCards: "#FF10F0",
-        bgColorBoard: "lightblue",
-        bgColorNoEquipment: "#FF10F0",
-        bgColorVideoGames: "#FF10F0"});
+        this.setState({bgColorAll: "white",
+        bgColorCards: "white",
+        bgColorBoard: "#b27d50",
+        bgColorNoEquipment: "white",
+        bgColorVideoGames: "white"});
       }
 
       handleChangeNoEquipment(event) {
         this.setState({gameKind: event.target.value});
-        this.setState({bgColorAll: "#FF10F0",
-        bgColorCards: "#FF10F0",
-        bgColorBoard: "#FF10F0",
-        bgColorNoEquipment: "lightblue",
-        bgColorVideoGames: "#FF10F0"});
+        this.setState({bgColorAll: "white",
+        bgColorCards: "white",
+        bgColorBoard: "white",
+        bgColorNoEquipment: "#b27d50",
+        bgColorVideoGames: "white"});
       }
 
       handleChangeVideoGames(event) {
         this.setState({gameKind: event.target.value});
-        this.setState({bgColorAll: "#FF10F0",
-        bgColorCards: "#FF10F0",
-        bgColorBoard: "#FF10F0",
-        bgColorNoEquipment: "#FF10F0",
-        bgColorVideoGames: "lightblue"});
+        this.setState({bgColorAll: "white",
+        bgColorCards: "white",
+        bgColorBoard: "white",
+        bgColorNoEquipment: "white",
+        bgColorVideoGames: "#b27d50"});
       }
 
 
@@ -87,11 +87,11 @@ export class GameKindQuestion extends Component {
                 <div class="question-container">
                 <div class="button">
                 <h1>What kind of game are you looking for?</h1>
-                    <button class="btn btn--alpha" style={{backgroundColor: this.state.bgColorAll}} value="all" onClick={this.handleChangeAll}>All</button>
                     <button class="btn btn--alpha" style={{backgroundColor: this.state.bgColorCards}} value="cards" onClick={this.handleChangeCards}>Cards</button>
                     <button class="btn btn--alpha" style={{backgroundColor: this.state.bgColorBoard}} value="board" onClick={this.handleChangeBoard}>Board</button>
                     <button class="btn btn--alpha" style={{backgroundColor: this.state.bgColorNoEquipment}} value="noEquipment" onClick={this.handleChangeNoEquipment}>No Equipment</button>
                     <button class="btn btn--alpha" style={{backgroundColor: this.state.bgColorVideoGames}} value="videoGames" onClick={this.handleChangeVideoGames}>Video games</button>
+                    <button class="btn btn--alpha" style={{backgroundColor: this.state.bgColorAll}} value="all" onClick={this.handleChangeAll}>All</button>
 
                     <Link to={{
                         pathname: '/h4/'+this.state.gameKind,
@@ -101,7 +101,7 @@ export class GameKindQuestion extends Component {
                             gameKind: this.state.gameKind
                         }
                     }}>   
-                    <button class="btn btn--alpha"><span>Continue</span></button>
+                    <button class="btn btn--alpha" id="btnContinue"><span>Continue</span></button>
                     </Link>
 
 
